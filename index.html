@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logo.png" class="imagen" alt="Logo Aventones" />
+    </header>
+
+    <main>
+        <h1>User Registration</h1>
+
+        <form  class="formm" id="registration_form">
+            <div>
+                <label for="first-name">First Name <br></label>
+                <input type="text" id="first-name" name="firs-name" required>
+            </div>
+
+            <div>
+                <label for="last-name">Last Name<br></label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="elementoTodo">
+                <label for="email">Email<br></label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="password">Password<br></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div>
+                <label for="repeat-password">Repeat Password<br></label>
+                <input type="password" id="repeat-password" name="repeat-password" required>
+            </div>
+
+            <div class="elementoTodo">
+                <label for="address">Address<br></label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div>
+                <label for="country">Country<br></label>
+                <select id="country" name="country" required>
+                    <option>Costa Rica</option>
+                    <option>Venezuela</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State<br></label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div>
+                <label for="city">City<br></label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div>
+                <label for="phone-number">Phone Number<br></label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+            </div>
+
+            <p class="left">Already a user? <a href="login.html">Login here</a></p>
+            <p class="right">Register as driver? <a href="driverRegister.html">Click here</a></p>
+            <div class="elementoTodo" id="boton">
+                <button type="submit">Sing Up</button>
+            </div>
+        </form>
+
+    </main>
+    
+    <footer>
+        <hr>
+        <nav aria-label="Navegación de pie de página.">
+            <a href="searchRides.html" class="foot">Home</a> |
+            <a href="myRides.html" class="foot">Rides</a> |
+            <a href="bookings.html" class="foot">Bookings</a> |
+            <a href="configuration.html" class="foot">Settings</a> |
+            <a href="login.html" class="foot">Login</a> |
+            <a href="index.html" class="foot">Register</a>
+        </nav>
+        <p>&copy; 2025 Aventones.com</p>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fuente-registro: 'Roboto', sans-serif;
+}
+
+/* ESTILOS DE REGISTRO*/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    margin-top: 60px;
+    width: 420px;
+    height: auto;
+}
+
+h1 {
+    /*Decendiente selector*/
+    font-size: 55px;
+    color: rgb(89, 89, 89);
+    font-family: var(--fuente-registro);
+    margin-top: 100px;
+    font-weight: 50;
+    text-align: center;
+
+}
+
+h1::after {
+    /**/
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+form >p{font-size: 10px;}
+.formm {
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.elementoTodo {
+    grid-column: 1 / -1;
+}
+.elementoTodo#boton{
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.formm>div {
+    padding: 10px;
+}
+
+.formm>div>label {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+}
+
+.formm>div>input {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgb(142, 142, 146);
+
+}
+
+.formm>div.elementoTodo>input {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+select {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+p.left,
+a {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-align: right;
+}
+
+p.right,
+a {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-align: left;
+}
+a.boton {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  background-color: #616161;
+  color: white;
+  font-family: var(--fuente-registro);
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+hr{
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+nav,a.foot{
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size:20px ;
+    color: #616161;
+    margin-bottom: 15px;
+}
+footer >p{
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size:20px ;color: #616161;
+}
+

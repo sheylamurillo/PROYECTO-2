@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--fuente-registro);
+   
+}
+fieldset {
+  border: none;
+ 
+}
+
+legend {
+  padding: 0;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+:root {
+    --fuente-registro: 'Roboto', sans-serif;
+}
+
+.Head a.activo {
+    background-color: #4a90e2;
+    /* o el azul que desees */
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+hr {
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+header>img[src="logo.png"] {
+    display: flex;
+}
+
+.diseno-logo {
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.contenedor-navegador {
+    display: flex;
+    background-color: #c6c6c6;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 3%;
+}
+
+nav.Head {
+    height: 40px;
+    margin-left: 40px;
+}
+
+.Head ul {
+    list-style-type: none;
+    display: flex;
+}
+h2{
+    font-size: 100%;  
+}
+
+.Head li {
+    /* float: left;*/
+    margin-right: 15px;
+}
+
+.Head a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+nav.Head:hover {
+    background-color: #c6c6c6;
+}
+
+
+div.contenedor-buscador {
+    margin-right: 40px;
+    display: flex;
+}
+
+.diseno-buscador {
+    font-size: 20px;
+    font-family: var(--fuente-registro);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    margin-top: 40px;
+    font-family: var(--fuente-registro);
+    font-size: 60px;
+    font-weight: lighter;
+    color: #616161;
+    text-align: center;
+}
+
+h1::after {
+    /**/
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+
+}
+
+.imagen-navegador {
+    width: 40px;
+    margin-left: 50px;
+}
+
+.opcionesUsuario {
+    display: grid;
+    max-width: 8%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: 3%;
+
+
+}
+#activo{
+    background-color: #dddddd;
+}
+
+.fila {
+    border: 1px solid black;
+}
+
+nav>div>a {
+    font-family: var(--fuente-registro);
+    text-decoration: none;
+    color: black;
+    font-size: 80%;
+}
+
+.formm {
+    display: grid;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    
+
+}
+
+
+.filas-boton{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/-1;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    align-items: center;
+}
+.diseno-input{
+    display: flex;
+    align-items: center;
+    
+}
+.diseno-input-d{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+fieldset.filas{
+    margin-top: 2%;
+    gap:8%;
+    display: flex;
+   flex-wrap: wrap;
+    grid-column: 1/-1;
+}
+.filas-vehiculo{
+    margin-top: 2%;
+    
+    width: 100%;
+    justify-content: center;
+    margin:0 auto;
+    gap:29%;
+    padding: 7%;
+    display: flex;
+    grid-column: 1/-1;
+    margin-top: -3%;
+    border:2px solid rgb(177, 175, 171);
+}
+
+.fila-space {
+    margin-top: 2%;
+    gap:8%;
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/-1;
+}
+
+.formm input[type="text"] {
+    width: 100%;
+    height: 80%;
+}
+
+button[type="submit"]{
+    background-color: #bfbfbf;
+    border: 2px solid #616161;
+    padding: 2% 15%;
+     font-family: var(--fuente-registro);
+}
+select,input[type="number"]{
+    
+    padding: 5% 10%;
+    font-family: var(--fuente-registro);
+}
+
+.foto-conductor{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.img-perfil {
+    width: 120px;
+    height: 120px;
+}
+
+.nombre-usuario {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/*footer nav*/
+nav,
+a.foot {
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    color: #616161;
+    margin-bottom: 15px;
+}
+
+footer>p {
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    color: #616161;
+}
+.formm > div >input.input-diseno{
+    width: 40% !important;
+    margin-left: 2%;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    border: none;
+}

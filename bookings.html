@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="css/StylesBooking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logo.png" class="diseno-logo" alt="Logo Aventones">
+        <div class="contenedor-navegador">
+            <nav class="Head" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="editProfile.html">Home</a></li>
+                    <li><a href="myRides.html">Rides</a></li>
+                    <li><a href="bookings.html" class="activo">Bookings</a></li>
+                </ul>
+            </nav>
+            <div class="contenedor-buscador">
+                <input type="text" placeholder="Search" aria-label="Search rides" class="diseno-buscador">
+                <img src="imagenes/usuario.png" class="imgUsuario" alt="Imagen de usuario">
+            </div>
+        </div>
+
+
+        <nav class="opciones-usuario" aria-label="Opciones de usuario">
+            <div class="fila"><a href="login.html">Logout</a></div>
+            <div class="fila" id="activo"><a href="configuration.html">Settings</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bookings</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Ride</th>
+                    <th>Accept/Reject</th>
+                </tr>
+
+
+            </thead>
+            <tbody id = "bookings_list">
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer>
+        <hr>
+        <nav aria-label="Navegación del pie de página">
+            <a href="searchRides.html" class="foot">Home</a> |
+            <a href="myRides.html" class="foot">Rides</a> |
+            <a href="bookings.html" class="foot">Bookings</a> |
+            <a href="configuration.html" class="foot">Settings</a> |
+            <a href="login.html" class="foot">Login</a> |
+            <a href="index.html" class="foot">Register</a>
+        </nav>
+        <p>&copy; 2025 Aventones.com</p>
+
+    </footer>
+
+</body>
+
+</html>

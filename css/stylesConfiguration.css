@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fuente-registro: 'Roboto', sans-serif;
+}
+.Head a.activo {
+    background-color: #4a90e2; /* o el azul que desees */
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+hr{
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+header > img[src="logo.png"]{
+    display: flex;
+}
+
+.diseno-logo{
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    margin: 0 auto;
+}
+.contenedor-navegacion{
+    display: flex;
+    background-color: #c6c6c6;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0% 3%;
+}
+nav.Head{
+    height: 40px;
+    margin-left: 40px;
+    }
+.Head ul{
+    list-style-type: none;
+    display: flex;
+}
+.Head li{
+   /* float: left;*/
+    margin-right: 15px;
+}
+.Head a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+.contenedor-buscador{
+    margin-right: 40px;
+    display: flex;
+}
+
+.diseno-buscador{
+    font-size: 20px;
+    font-family: var(--fuente-registro);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    margin-top: 40px;
+    font-family:var(--fuente-registro);
+    font-size:60px ;
+    font-weight: lighter;
+    color: #616161;
+    text-align: center;
+}
+
+h1::after {
+    /**/
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+
+}
+form{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1%;
+    flex-direction: column;
+    width: 40%;
+   
+    font-family: var(--fuente-registro);
+    font-size: 100%;
+}
+form>input{
+    width: 50%;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+textarea{
+    font-family: var(--fuente-registro);
+    margin-bottom: 50%;
+    padding: 4%;
+}
+
+ .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom:10% ;
+    }
+
+    .buttons a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+
+.imagen-navegador{
+  width: 40px; 
+  margin-left: 50px;
+}
+
+
+/*footer nav*/
+nav,a.foot{
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size:20px ;
+    color: #616161;
+    margin-bottom: 15px;
+}
+footer >p{
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size:20px ;color: #616161;
+}
+
