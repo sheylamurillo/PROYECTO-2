@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rider registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="js/createRider.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logo.png" class="imagen" alt="Logo Aventones" />
+    </header>
+
+    <main>
+        <h1>Rider Registration</h1>
+
+        <form class="formm" id="registration_rider_form">
+            <div>
+                <label for="id-card">ID<br></label>
+                <input type="text" id="id-card" name="id-card" required>
+            </div>
+
+            <div>
+                <label for="birth-date">Birth Date<br></label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div>
+
+            <div>
+                <label for="first-name">First Name <br></label>
+                <input type="text" id="first-name" name="firs-name" required>
+            </div>
+
+            <div>
+                <label for="last-name">Last Name<br></label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="elementoTodo">
+                <label for="email">Email<br></label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="password">Password<br></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div>
+                <label for="repeat-password">Repeat Password<br></label>
+                <input type="password" id="repeat-password" name="repeat-password" required>
+            </div>
+
+            <div class="elementoTodo">
+                <label for="address">Address<br></label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div>
+                <label for="country">Country<br></label>
+                <select id="country" name="country" >
+                    <option>Costa Rica</option>
+                    <option>Venezuela</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State<br></label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div>
+                <label for="city">City<br></label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div>
+                <label for="phone-number">Phone Number<br></label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+            </div>
+            <h2>Vehicle Details</h2>
+            <div class="filas-vehiculo">
+
+                <div>
+                    <label for="license">License <br></label>
+                    <input type="text" id="license" name="license" required>
+                </div>
+                 <div>
+                <label for="make">Make <br></label>
+                <select id="make" name="make">
+                    <option>Nissan</option>
+                    <option>Toyota</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="model">Model <br></label>
+                <input type="text"  id="model" name="model" required>
+            </div>
+            <div>
+                <label for="year">Year <br></label>
+                <input type="number" min="1900" max="2025" step="1" value="2025" id="year" name="year" required>
+            </div>
+            </div>
+           
+
+
+            <p class="left">Already a user? <a href="login.html">Login here</a></p>
+            <p class="right">Register as driver? <a href="driverRegister.html">Click here</a></p>
+            <div class="elementoTodo" id="boton">
+                <button type="submit">Sing Up</button>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <hr>
+        <nav aria-label="Navegación de pie de página.">
+            <a href="searchRides.html" class="foot">Home</a> |
+            <a href="myRides.html" class="foot">Rides</a> |
+            <a href="bookings.html" class="foot">Bookings</a> |
+            <a href="configuration.html" class="foot">Settings</a> |
+            <a href="login.html" class="foot">Login</a> |
+            <a href="index.html" class="foot">Register</a>
+        </nav>
+        <p>&copy; 2025 Aventones.com</p>
+
+    </footer>
+</body>
+
+</html>
