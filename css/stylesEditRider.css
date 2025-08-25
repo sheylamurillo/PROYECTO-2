@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fuente-registro: 'Roboto', sans-serif;
+}
+
+.Head a.activo {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+}
+
+header>img[src="imagenes/logo.png"] {
+    display: flex;
+
+}
+
+.diseno-logo {
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.contenedor-navegador {
+    display: flex;
+    background-color: #c6c6c6;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 3%;
+}
+
+nav.Head {
+    height: 40px;
+    margin-left: 40px;
+}
+
+.Head ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.Head li {
+    /* float: left;*/
+    margin-right: 15px;
+}
+
+.Head a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+nav.Head:hover {
+    background-color: #c6c6c6;
+}
+
+div.contenedor-buscador {
+    margin-right: 40px;
+    display: flex;
+}
+
+.diseno-buscador {
+    font-size: 20px;
+    font-family: var(--fuente-registro);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.imagen-diseno {
+    width: 40px;
+    margin-left: 50px;
+}
+
+.usuario-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-hover {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.menu-hover ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-hover ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-hover ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.usuario-menu:hover .menu-hover {
+    display: block;
+}
+
+.imagen-navegador {
+    width: 40px;
+    margin-left: 50px;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+h1 {
+    font-size: 55px;
+    color: rgb(89, 89, 89);
+    font-family: var(--fuente-registro);
+    margin-top: 100px;
+    font-weight: 50;
+    text-align: center;
+
+}
+
+h1::after {
+    /**/
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+form>p {
+    font-size: 10px;
+}
+
+.formm {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.elementoTodo {
+    grid-column: 1 / -1;
+}
+
+.elementoTodo#boton {
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.formm>div {
+    padding: 10px;
+}
+
+.formm>div>label {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+}
+
+.formm>div>input {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgb(142, 142, 146);
+
+}
+
+.formm>div.elementoTodo>input {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+select {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+p.left,
+a {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-align: right;
+}
+
+p.right,
+a {
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-align: left;
+}
+
+a.boton {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background-color: #616161;
+    color: white;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+hr {
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+nav,
+a.foot {
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    color: #616161;
+    margin-bottom: 15px;
+}
+
+footer>p {
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    color: #616161;
+}
+
+h2 {
+    font-family: var(--fuente-registro);
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.filas-vehiculo {
+    font-family: var(--fuente-registro);
+    margin-top: 2%;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 10%;
+    padding: 7%;
+    display: flex;
+    grid-column: 1/-1;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    border: 2px solid rgb(177, 175, 171);
+}
+
+
+.filas-vehiculo>div>input,
+label {
+    height: 70%;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+}
+
+.filas-vehiculo>div {
+    flex: 1;
+}
+
+.filas-vehiculo>div input,
+.filas-vehiculo>div select,
+.filas-vehiculo>div select {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    background-color: rgb(28, 28, 93);
+    font-family: var(--fuente-registro);
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 46px;
+    font-size: 20px;
+    border: 2px solid gray;
+}
+
+@media (min-width: 1680px) and (max-width: 1681px) and (min-height: 1050px) and (max-height: 1051px) {
+
+    /*------------------------------------------menu-------------------------------*/
+    nav.Head {
+        height: 4rem;
+        margin-left: 40px;
+    }
+
+    .Head ul {
+        width: 2.5rem;
+    }
+
+    .Head a {
+        font-size: 2.5rem;
+    }
+
+    .contenedor-buscador {
+        display: flex;
+        align-items: center;
+    }
+
+    .diseno-buscador {
+        font-size: 2rem;
+        height: 100%;
+
+    }
+
+    .imagen-navegador {
+        width: 45%;
+        margin-left: 50px;
+    }
+
+    /*------------------------------------------menu-------------------------------*/
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .formm {
+        max-width: 60%;
+    }
+
+    nav,
+    a.foot {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    footer>p {
+        font-size: 2rem;
+    }
+
+    .formm>div>label {
+        font-size: 2rem;
+    }
+
+    .formm>div>input {
+        font-size: 2rem;
+    }
+
+    .formm>div.elementoTodo>input {
+        font-size: 2rem;
+    }
+
+    select {
+        font-size: 2rem;
+    }
+
+    p.left,
+    a {
+        font-size: 2rem;
+    }
+
+    p.right,
+    a {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 2rem;
+    }
+
+    .filas-vehiculo>div>label,
+    select,
+    input,
+    #model,
+    #year,
+    #license {
+        font-size: 2rem;
+    }
+
+    .filas-vehiculo>div select {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        font-size: 2rem;
+        padding: 8px;
+    }
+
+}
+
+@media (max-width: 431px) and (max-height: 933px) {
+
+    /*navegacion y menus*/
+    .diseno-logo {
+        margin-top: -3%;
+        width: 60%;
+        height: auto;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    h1::after {
+        margin-top: 0%;
+        margin-bottom: 5%;
+    }
+
+    .contenedor-navegador {
+        /*contiene todolo de nav*/
+        height: 2.5em;
+        margin: 0% 1%;
+        margin-top: -3%;
+        margin-bottom: -3%;
+    }
+
+    div.contenedor-buscador {
+        /*contiene la barra y la imagen de user*/
+        margin-right: 1%;
+        align-items: center;
+    }
+
+    .search-div {
+        /*contenedor que tiene la barra*/
+        margin-right: -30px;
+    }
+
+    .diseno-buscador {
+        /*barra de buscar*/
+        font-size: 90%;
+        width: 200px;
+        height: 28px;
+        border: 1px solid rgb(198, 196, 196);
+    }
+
+    .imagen-navegador {
+        /*imagen de usuario*/
+        width: 2.3rem;
+        margin-left: 50px;
+    }
+
+    nav,
+    a.foot,
+    footer>p {
+        font-size: 100%;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+
+    .toggle-menu {
+        width: 2rem;
+        margin-left: 30%;
+    }
+
+    .Head ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .toggle:hover .Head {
+        display: block;
+    }
+
+    nav.Head {
+        height: 90vh;
+        width: 80%;
+        margin-left: 0.5%;
+        display: none;
+        position: absolute;
+        top: 13.5%;
+        left: 0;
+        background-color: #e9e9e9;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+
+    }
+
+    .Head a.activo {
+        background-color: #d0d0d0;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+    }
+
+    .Head ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .Head li {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    /*termina*/
+    h1 {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 5%;
+    }
+
+    .formm {
+        padding: 5px;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formm>div>label {
+        font-size: 100%;
+    }
+
+    .formm>div>input {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    .formm>div.elementoTodo>input {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    select {
+        font-size: 100%;
+        padding: 3%;
+    }
+
+    p.left,
+    a {
+        font-size: 100%;
+    }
+
+    p.right,
+    a {
+        font-size: 100%;
+    }
+
+    .filas-vehiculo {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px;
+        border: 2px solid rgb(177, 175, 171);
+    }
+
+    .filas-vehiculo>div {
+        flex: 1;
+    }
+
+    .filas-vehiculo>div input,
+    .filas-vehiculo>div select {
+        width: 90%;
+        height: 65%;
+
+    }
+
+    label {
+        font-size: 100%;
+    }
+
+    .formm>p.left {
+        margin-right: 10%;
+    }
+
+    .formm>p.right {
+        margin-left: 4%;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+
+    nav,
+    a.foot,
+    footer>p {
+        font-size: 100%;
+    }
+
+}
