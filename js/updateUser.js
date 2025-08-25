@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const loginData = JSON.parse(sessionStorage.getItem('login'));
+    checkRole(loginData);
+
+    const logoutLink = document.getElementById("logout-link");
+    linkLogout(logoutLink);
+
     document.getElementById('users_edit_form')
         .addEventListener('submit', function (event) {
             event.preventDefault();
@@ -7,10 +13,38 @@ document.addEventListener('DOMContentLoaded', function () {
     loadUser();
 });
 
+//check role and ID to grant access 
+function checkRole(loginData) {
+    const role = loginData.role;
+    if (role !== 1) {
+        $('#newRideBtn').hide();
+        $('#actionTable').hide();
+        $('#rides-navegation').hide();
+    }
+    else {
+        window.location.href = 'updateRider.html';
+    }
+}
 
+//listen to the event
+function linkLogout(logoutLink) {
+    if (logoutLink) {
+        logoutLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            logoutUser();
+        });
+    }
+}
 
-function getUserData() {
-    // get user information
+//clears the session storage and redirects to the login
+function logoutUser() {
+    sessionStorage.clear();
+    window.location.href = "login.html";
+}
+
+function getUserData() {// get user information
+    const identification = document.getElementById('id-card').value;
+    const birthDay = document.getElementById('birth-date').value;
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const email = document.getElementById('email').value;
@@ -21,38 +55,64 @@ function getUserData() {
     const state = document.getElementById('state').value;
     const city = document.getElementById('city').value;
     const phoneNumber = document.getElementById('phone-number').value;
-
+    const role = 0;
     if (password !== repeatPassword) { // Check that both passwords match
         alert('Passwords do not match. Please try again.');
         return null;
     }
-    return { firstName, lastName, email, password, address, country, state, city, phoneNumber };
+    return { identification, birthDay, firstName, lastName, email, password, address, country, state, city, phoneNumber, role };
 }
 
 function updateUser() {
-    const userIndex = sessionStorage.getItem('loginIndex');
+    const currentUser = JSON.parse(sessionStorage.getItem('login'));
+    const role = currentUser.role;
+    const userId = currentUser.identification;
     const userData = getUserData();
 
-    if (!userData) { //if userData is null, stop and dont save
+    if (!userData) {
         return;
     }
 
     let userList = JSON.parse(localStorage.getItem('users'));
+    let indexUser = -1;
 
-    if (userIndex !== null && userIndex < userList.length) {
-        userList[userIndex] = userData; //replace old information with new data
+    userList.forEach((user, index) => {
+        if (Number(user.identification) === Number(userId)) {
+            indexUser = index;
+        }
+    });
+
+    if (indexUser !== -1) {
+        userList[indexUser] = userData;
         localStorage.setItem('users', JSON.stringify(userList));
-        alert('User updated successfully!');
-        window.location.href = 'myRides.html';
+        if (role === 0) {
+            window.location.href = 'bookings.html';
+        }
+        else {
+            window.location.href = 'myRides.html';
+        }
+
     }
 }
 
+
 function loadUser() {
-    const userIndex = sessionStorage.getItem('loginIndex');
+    const currentUser = JSON.parse(sessionStorage.getItem('login'));
+    const userId = currentUser.identification;
     const userList = JSON.parse(localStorage.getItem('users')) || [];
 
-    if (userIndex !== null && userIndex < userList.length) {
-        const userCurrent = userList[userIndex];
+    let indexUser = -1;
+
+    userList.forEach((user, index) => {
+        if (Number(user.identification) === Number(userId)) {
+            indexUser = index;
+        }
+    });
+
+    if (indexUser !== -1) {
+        const userCurrent = userList[indexUser];
+        document.getElementById('id-card').value = userCurrent.identification;
+        document.getElementById('birth-date').value = userCurrent.birthDay;
         document.getElementById('first-name').value = userCurrent.firstName;
         document.getElementById('last-name').value = userCurrent.lastName;
         document.getElementById('email').value = userCurrent.email;
@@ -63,5 +123,6 @@ function loadUser() {
         document.getElementById('state').value = userCurrent.state;
         document.getElementById('city').value = userCurrent.city;
         document.getElementById('phone-number').value = userCurrent.phoneNumber;
+
     }
 }
