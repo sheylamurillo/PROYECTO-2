@@ -23,18 +23,15 @@ header {
 }
 
 h1 {
-    /*Decendiente selector*/
     font-size: 55px;
     color: rgb(89, 89, 89);
     font-family: var(--fuente-registro);
     margin-top: 100px;
     font-weight: 50;
     text-align: center;
-
 }
 
 h1::after {
-    /**/
     content: "";
     display: block;
     margin: 0 auto;
@@ -44,9 +41,12 @@ h1::after {
     margin-top: 10px;
 }
 
-form >p{font-size: 10px;}
+form>p {
+    font-size: 10px;
+}
+
 .formm {
-   
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -58,7 +58,8 @@ form >p{font-size: 10px;}
 .elementoTodo {
     grid-column: 1 / -1;
 }
-.elementoTodo#boton{
+
+.elementoTodo#boton {
     grid-column: 1/-1;
     text-align: center;
     padding-top: 10px;
@@ -80,7 +81,6 @@ form >p{font-size: 10px;}
     padding: 10px;
     width: 100%;
     border: 2px solid rgb(142, 142, 146);
-
 }
 
 .formm>div.elementoTodo>input {
@@ -110,34 +110,238 @@ a {
     font-size: 20px;
     text-align: left;
 }
+
 a.boton {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 15px 40px;
-  background-color: #616161;
-  color: white;
-  font-family: var(--fuente-registro);
-  font-size: 20px;
-  text-decoration: none;
-  border-radius: 8px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background-color: #616161;
+    color: white;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
 }
-hr{
+
+hr {
     background-color: #ccc;
     margin-bottom: 20px;
 }
 
-nav,a.foot{
+nav,
+a.foot {
     text-align: center;
     text-decoration: none;
     font-family: var(--fuente-registro);
-    font-size:20px ;
+    font-size: 20px;
     color: #616161;
     margin-bottom: 15px;
 }
-footer >p{
+
+footer>p {
     text-align: center;
     text-decoration: none;
     font-family: var(--fuente-registro);
-    font-size:20px ;color: #616161;
+    font-size: 20px;
+    color: #616161;
 }
 
+h2 {
+    font-family: var(--fuente-registro);
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.filas-vehiculo {
+    font-family: var(--fuente-registro);
+    margin-top: 2%;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 10%;
+    padding: 7%;
+    display: flex;
+    grid-column: 1/-1;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    border: 2px solid rgb(177, 175, 171);
+}
+
+.filas-vehiculo>div {
+    flex: 1;
+}
+
+.filas-vehiculo>div input,
+.filas-vehiculo>div select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.filas-vehiculo>div>input,
+label {
+    height: 70%;
+    font-family: var(--fuente-registro);
+    font-size: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b3b3b3;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.foot {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+@media (min-width: 1680px) and (max-width: 1681px) and (min-height: 1050px) and (max-height: 1051px) {
+    .formm {
+        max-width: 60%;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    .formm>div>label {
+        font-size: 1.5rem;
+    }
+
+    .formm>div>input {
+        font-size: 1.5rem;
+    }
+
+    .formm>div.elementoTodo>input {
+        font-size: 1.5rem;
+    }
+
+    select {
+        font-size: 1.5rem;
+    }
+
+    p.left,
+    a {
+        font-size: 1.5rem;
+    }
+
+    p.right,
+    a {
+        font-size: 1.5rem;
+    }
+
+    a.boton {
+        font-size: 1.5rem;
+    }
+
+    nav,
+    a.foot {
+        font-size: 1.5rem;
+    }
+
+    footer>p {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 431px) and (max-height: 933px) {
+    .imagen {
+        margin-top: 5%;
+        width: 65%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .formm {
+        padding: 5px;
+        margin: 0;
+        gap: 0;
+    }
+
+    .formm>div>label {
+        font-size: 100%;
+    }
+
+    .formm>div>input {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    .formm>div.elementoTodo>input {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    select {
+        font-size: 100%;
+        padding: 3%;
+    }
+
+    p.left,
+    a {
+        font-size: 100%;
+    }
+
+    p.right,
+    a {
+        font-size: 100%;
+    }
+
+    .filas-vehiculo {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px;
+        border: 2px solid rgb(177, 175, 171);
+    }
+
+    .filas-vehiculo>div {
+        flex: 1;
+    }
+
+    .filas-vehiculo>div input,
+    .filas-vehiculo>div select {
+        width: 90%;
+        height: 65%;
+    }
+
+    label {
+        font-size: 100%;
+    }
+
+    .formm>p.left {
+        margin-right: 10%;
+    }
+
+    .formm>p.right {
+        margin-left: 4%;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+
+    nav,
+    a.foot,
+    footer>p {
+        font-size: 100%;
+    }
+
+    button,
+    p {
+        margin-top: 5%;
+    }
+}

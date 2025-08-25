@@ -3,47 +3,51 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --fuente-registro: 'Roboto', sans-serif;
 }
-main{
-    margin:0px 100px;
+
+main {
+    margin: 0px 100px;
     margin-top: 10%;
     padding: 30px;
     margin-bottom: 20%;
     border: 2px solid darkblue;
 }
-header{
+
+header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.imagenLogo{
+
+.imagenLogo {
     width: 400px;
     height: auto;
     margin-top: 0px;
     margin-bottom: 50px;
 }
 
-.imagenGoogle{
+.imagenGoogle {
     width: 250px;
     height: auto;
     margin-top: 5px;
     margin-bottom: 20px;
 }
-.imagenContenedor{
+
+.imagenContenedor {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
-hr{
+hr {
     background-color: #ccc;
     margin-bottom: 20px;
 }
 
-
-.contenedorLogin{
+.contenedorLogin {
     font-family: var(--fuente-registro);
     display: flex;
     flex-direction: column;
@@ -53,51 +57,190 @@ hr{
     margin: 20px;
 }
 
-
-
-.contenedorLogin > form > input{
+.contenedorLogin>form>input {
     margin-bottom: 15px;
     border: 2px solid rgb(223, 223, 223);
-    height: 33px; 
-
+    height: 33px;
 }
 
-form{
+form {
     width: 25%;
     display: flex;
     flex-direction: column;
-   
 }
-.conteBoton{
-   
+
+.conteBoton {
+
     width: 50%;
     margin: 20px auto 30px auto;
     display: flex;
     justify-content: flex-end;
 }
-.boton {
-    margin-top: 20px;
-    background-color: rgb(145, 145, 145);
-    color: aliceblue;
-    text-decoration: none;
-    padding: 10px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    
+
+button {
+    padding: 10px 20px;
+    background-color: #d2d2d2;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
 }
 
-nav,a.foot{
+a.foot {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+nav,
+a.foot {
     text-align: center;
     text-decoration: none;
     font-family: var(--fuente-registro);
-    font-size:20px ;
+    font-size: 20px;
     color: #616161;
     margin-bottom: 15px;
 }
-footer >p{
+
+footer>p {
     text-align: center;
     text-decoration: none;
     font-family: var(--fuente-registro);
-    font-size:20px ;color: #616161;
+    font-size: 20px;
+    color: #616161;
 }
 
+@media (min-width: 1680px) and (max-width: 1681px) and (min-height: 1050px) and (max-height: 1051px) {
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 5%;
+    }
+
+    main {
+        height: 100%;
+    }
+
+    .contenedorLogin {
+
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -5%;
+    }
+
+    form {
+        margin-top: -100%;
+        width: 60%;
+        padding: 5%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form>label {
+        align-self: flex-start;
+        margin-left: 11rem;
+    }
+
+    /*footer nav*/
+    nav,
+    a.foot {
+        font-size: 2rem;
+    }
+
+    footer>p {
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: -10%;
+    }
+
+    form>label,
+    input,
+    a,
+    button,
+    p {
+        font-size: 2rem;
+    }
+
+    form>input {
+        width: 50%;
+    }
+
+    .buttons {
+        margin-top: -20%;
+    }
+
+    form>p {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (min-width: 432px) and (max-width: 1025px) and (max-height: 1367px) {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 5%;
+    }
+
+    form {
+        width: 60%;
+        padding: 10%;
+    }
+
+    label,
+    input,
+    button {
+        font-size: 100%;
+        font-family: var(--fuente-registro);
+    }
+
+    p {
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 431px) and (max-height: 933px) {
+    .imagenLogo {
+        margin-top: 5rem;
+        width: 18rem;
+    }
+
+    .imagenGoogle {
+        width: 13rem;
+        height: auto;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    footer {
+        margin-top: 7rem;
+    }
+
+    main {
+        margin: 0% 10%;
+        margin-top: 10%;
+        width: 80%;
+        padding: 3%;
+        height: 50%;
+        margin-bottom: 10%;
+    }
+
+    form label,
+    input {
+        font-size: 100%;
+    }
+
+    button {
+        font-size: 100%;
+        margin: 0 auto;
+    }
+
+}

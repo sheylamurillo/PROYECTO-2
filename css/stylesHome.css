@@ -19,8 +19,9 @@ hr{
     margin-bottom: 20px;
 }
 
-header > img[src="logo.png"]{
+header>img[src="imagenes/logo.png"] {
     display: flex;
+   
 }
 
 .logoDise{
@@ -162,3 +163,42 @@ footer >p{
     font-size:20px ;color: #616161;
 }
 
+
+.usuario-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-hover {
+    display: none;
+    position: absolute;
+    top: 50px; /* aparece debajo de la imagen */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.menu-hover ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-hover ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-hover ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.usuario-menu:hover .menu-hover {
+    display: block;
+}
