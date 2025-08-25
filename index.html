@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
-    <link rel="stylesheet" href="css/Styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="js/createUsers.js"></script>
 </head>
@@ -18,6 +19,16 @@
         <h1>User Registration</h1>
 
         <form  class="formm" id="registration_form">
+            <div>
+                <label for="id-card">ID<br></label>
+                <input type="text" id="id-card" name="id-card" required>
+            </div>
+
+            <div>
+                <label for="birth-date">Birth Date<br></label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div>
+
             <div>
                 <label for="first-name">First Name <br></label>
                 <input type="text" id="first-name" name="firs-name" required>
@@ -50,7 +61,7 @@
 
             <div>
                 <label for="country">Country<br></label>
-                <select id="country" name="country" required>
+                <select id="country" name="country" >
                     <option>Costa Rica</option>
                     <option>Venezuela</option>
                 </select>
@@ -72,7 +83,7 @@
             </div>
 
             <p class="left">Already a user? <a href="login.html">Login here</a></p>
-            <p class="right">Register as driver? <a href="driverRegister.html">Click here</a></p>
+            <p class="right">Register as driver? <a href="addRider.html">Click here</a></p>
             <div class="elementoTodo" id="boton">
                 <button type="submit">Sing Up</button>
             </div>

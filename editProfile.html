@@ -3,26 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
     <link rel="stylesheet" href="css/StylesEditProfile.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="js/updateUser.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
     <header>
         <img src="imagenes/logo.png" class="diseno-logo" alt="logo Aventones">
         <div class="contenedor-navegador">
-            <nav class="Head" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="editProfile.html" class="activo">Home</a></li>
-                    <li><a href="myRides.html">Rides</a></li>
-                    <li><a href="bookings.html">Bookings</a></li>
-                </ul>
-            </nav>
+            <div class="toggle">
+                <img src="imagenes/menu.png" class="toggle-menu" alt="toggle-menu">
+                <nav class="Head" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="searchRides.html" class="activo">Home</a></li>
+                        <li id="rides-navegation"><a href="myRides.html">Rides</a></li>
+                        <li><a href="bookings.html">Bookings</a></li>
+                    </ul>
+                </nav>
+            </div>
+
             <div class="contenedor-buscador">
                 <input type="text" placeholder="Search" aria-label="Search rides" class="diseno-buscador">
-                <img src="imagenes/usuario.png" class="imagen-diseno" alt="imagen de usuario">
+                <div class="usuario-menu">
+                    <img src="imagenes/usuario.png" class="imagen-navegador" alt="icono de usuario">
+                    <nav class="menu-hover">
+                        <ul>
+                            <li><a href="login.html" id="logout-link">Logout</a></li>
+                            <li><a href="editProfile.html">Profile</a></li>
+                            <li><a href="configuration.html" class="activo">Configuration</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -30,8 +47,17 @@
 
     <main>
         <h1>Edit Profile</h1>
-
         <form class="table" id="users_edit_form">
+             <div>
+                <label for="id-card">ID<br></label>
+                <input type="text" id="id-card" name="id-card" required disabled>
+            </div>
+
+            <div>
+                <label for="birth-date">Birth Date<br></label>
+                <input type="date" id="birth-date" name="birth-date" required>
+            </div>
+            
             <div>
                 <label for="first-name">First Name <br></label>
                 <input type="text" id="first-name" name="firs-name" value="sheyla">
@@ -94,8 +120,9 @@
                 <button type="submit">save</button>
             </div>
 
-
         </form>
+       
+        
     </main>
     <footer>
         <hr>

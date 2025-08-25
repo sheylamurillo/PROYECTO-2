@@ -4,25 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <title>My Rides</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/SearchRides.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <script src="js/searchRides.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <header>
         <img src="imagenes/logo.png" class="diseno-logo" alt="logo aventones">
         <div class="contenedor-navegacion">
-            <nav class="Head" aria-label="Menú principal">
-                <ul>
-                    <li><a href="editProfile.html" class="activo">Home</a></li>
-                    <li><a href="myRides.html">Rides</a></li>
-                    <li><a href="bookings.html">Bookings</a></li>
-                </ul>
-            </nav>
-            <div class="buscador">
-                <input type="text" placeholder="Search" aria-label="Search rides" class="diseno-buscador">
-                <img src="imagenes/usuario.png" class="imagen-navegador" alt="Imagen de usuario">
+            <div class="toggle">
+                <img src="imagenes/menu.png" class="toggle-menu" alt="toggle-menu">
+                <nav class="Head" aria-label="Menú principal">
+                    <ul>
+                        <li><a href="searchRides.html" class="activo">Home</a></li>
+                        <li id="rides-navegation"><a href="myRides.html">Rides</a></li>
+                        <li><a href="bookings.html">Bookings</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="contenedor-buscador">
+                <div class="search-div">
+                    <input type="text" placeholder="Search" aria-label="Search rides" class="diseno-buscador">
+                </div>
+
+                <div class="usuario-menu">
+                    <img src="imagenes/usuario.png" class="imagen-navegador" alt="icono de usuario">
+                    <nav class="menu-hover">
+                        <ul>
+                            <li><a href="login.html" id="logout-link">Logout</a></li>
+                            <li><a href="editProfile.html">Profile</a></li>
+                            <li><a href="configuration.html" class="activo">Configuration</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -33,14 +52,10 @@
             <section class="section-search">
                 <div class="lugares">
                     <label>From</label>
-                    <select class="select-from" id="from">
-                        <option>Naranjo</option>
-                        <option>Upala</option>
+                    <select class="select-from" id="from-select">
                     </select>
                     <label>To</label>
-                    <select class="select-to" id="to">
-                        <option>San José</option>
-                        <option>Liberia</option>
+                    <select class="select-to" id="to-select">
                     </select>
                     <button type="submit"> Find Rides</button>
                 </div>
@@ -55,14 +70,20 @@
                         <label for="fri"><input id="fri" name="days[]" type="checkbox" value="Fri" checked> Fri</label>
                         <label for="sat"><input id="sat" name="days[]" type="checkbox" value="Sat" checked> Sat</label>
                         <label for="sun"><input id="sun" name="days[]" type="checkbox" value="Sun" checked> Sun</label>
+
+
                     </div>
+                    <div class="container-button">
+                        <button class="button-responsive" type="submit"> Find Rides</button>
+                    </div>
+
                 </div>
             </section>
         </form>
 
 
         <section class="section-information">
-            <p class="text">Rides found from <strong>Quesada</strong> to <strong>Zarcero</strong></p>
+            <p class="text" id="rides-info-text">Rides found from <strong></strong> to <strong></strong></p>
             <table>
                 <thead>
                     <tr>
@@ -77,17 +98,16 @@
                     </tr>
                 </thead>
                 <tbody id="search_list">
-                   
-
                 </tbody>
             </table>
 
         </section>
 
         <section>
-            <figure>
-                <img src="imagenes/mapa.png" alt="Imagen de mapa" class="imagen-mapa">
-            </figure>
+            <iframe class="imagen-mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.1184828238515!2d-84.4230223!3d10.3142701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065e88d7467c3%3A0x4601c6c51fd48543!2sBarrio%20Gamonales%2C%20Cd%20Quesada!5e0!3m2!1ses!2scr!4v1724025000000!5m2!1ses!2scrs"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
 
     </main>
